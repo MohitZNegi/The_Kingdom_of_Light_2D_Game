@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
           anim.SetBool("Sit", true);
             anim.SetBool("Run", false);
         
-            speed=speed-3;
+            speed=speed-2;
 
           
         }
@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
            anim.SetBool("Sit", false);
            anim.SetBool("Sneak", false);
      
-            speed=5;
+            speed=5.5f;
         }
 
      

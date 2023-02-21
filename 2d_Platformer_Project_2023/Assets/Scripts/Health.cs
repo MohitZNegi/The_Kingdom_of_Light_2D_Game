@@ -8,6 +8,11 @@ public class Health : MonoBehaviour
     [SerializeField] private float startingHealth;
     [SerializeField] private AudioClip hurtsound;
     [SerializeField] private AudioClip deathSound;
+
+   [SerializeField] private GameObject bgsound;
+
+    [SerializeField] private GameObject gameover;
+
     public float currentHealth { get; private set; }
     private Animator anim;
     private bool dead;
@@ -35,6 +40,8 @@ public class Health : MonoBehaviour
                 GetComponent<PlayerMovement>().enabled = false;
                 dead = true;
                 SoundEff_Manager.instance.PlaySound(deathSound);
+                bgsound.SetActive(false);
+                 gameover.SetActive(true);
                 
             }
         }
