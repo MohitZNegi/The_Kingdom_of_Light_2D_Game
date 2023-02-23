@@ -7,6 +7,8 @@ public class Level_Finish_Point : MonoBehaviour
 {
      [SerializeField] private AudioClip Level_completed;
        [SerializeField] private GameObject bgsound;
+       [SerializeField] private GameObject info;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -17,6 +19,11 @@ public class Level_Finish_Point : MonoBehaviour
             
           
         }
+        else if(Collectable.instance.score != 50 &&  collision.tag == "Knight"){
+          info.SetActive(true);
+        }
+
+        
      
     }
 

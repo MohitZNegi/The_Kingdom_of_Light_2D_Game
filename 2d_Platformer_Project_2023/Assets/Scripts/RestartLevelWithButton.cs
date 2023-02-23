@@ -7,10 +7,15 @@ public class RestartLevelWithButton : MonoBehaviour
 {
     [SerializeField]
     KeyCode keyRestart;
+     [SerializeField]
+     KeyCode keyQuit;
 	
 	void Update ()
     {
         if (Input.GetKey(keyRestart))
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+           {SceneManager.LoadScene(SceneManager.GetActiveScene().name);}
+
+        if (Input.GetKey(keyQuit))
+           { Application.Quit();}
 	}
 }
